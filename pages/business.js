@@ -1,28 +1,26 @@
-import { Toolbar } from '@/components/Toolbar'
-import styles from '../styles/Home.module.css'
-import React from 'react';
-import axios from 'axios';
+import axios from "axios";
+import { Toolbar } from "@/components/Toolbar";
 
 
 
 
-export const getStaticProps = async () => {
-  const data = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=6aa3a664cb254c79835764892ea11faf`)
+export const getStaticProps = async ()=>{
+    const data = await axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=6aa3a664cb254c79835764892ea11faf`)
   return {
-    props: {
-      news: data.data
-    }
+  props: {
+  news: data.data
+  }
   };
-};
-
-export default function Home({ news }) {
-
-  return (
-    <>
+  };
+  
+  export default function Home({news}) {
+    
+    return (
+      <>
       <Toolbar />
-
+    
       <div class="container mx-auto">
-        <h1>Top News</h1>
+        <h1>Business News</h1>
         <div class="card-group" >
           <div class="row">
         {news.articles.map((ne) => {
@@ -43,8 +41,6 @@ export default function Home({ news }) {
         </div>
         </div>
       </div>
-
-
-    </>
-  )
-}
+      </>
+    )
+  }
