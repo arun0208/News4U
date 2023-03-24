@@ -5,7 +5,7 @@ import { Toolbar } from "@/components/Toolbar";
 
 
 export const getStaticProps = async ()=>{
-    const data = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=6aa3a664cb254c79835764892ea11faf`)
+    const data = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=100&apiKey=6aa3a664cb254c79835764892ea11faf`)
   return {
   props: {
   news: data.data

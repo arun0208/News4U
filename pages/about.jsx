@@ -3,10 +3,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 export const About= () => {
     return(
-        <div>
+        <>
         <Toolbar />
-        <h1>Hey, I am Arun Sharma</h1>
+        <div class="container">
+        <h1 class="text-center">Hey, I am Arun Sharma</h1>
         </div>
+        </>
     )
 }
 
