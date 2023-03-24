@@ -33,7 +33,7 @@ export default function Home({ news }) {
         <Toolbar />
 
         <div class="container mx-auto">
-          <h1>Top News</h1>
+          <h1 class="text-center">Top News</h1>
           <div class="card-group" >
             <div class="row">
               {paginatedPosts.map((ne) => {
